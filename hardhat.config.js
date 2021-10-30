@@ -1,6 +1,9 @@
 require('dotenv').config();
 require("@nomiclabs/hardhat-waffle");
-console.log(process.env.POLYGON_MAINNET_URL);
+
+const MUMBAI_URL = process.env.POLYGON_MUMBAI_URL;
+const MAINNET_URL = process.env.POLYGON_MAINNET_URL;
+const METAMASK_ACCOUNT = process.env.METAMASK_PRIVATE_KEY;
 
 module.exports = {
   networks: {
@@ -8,12 +11,12 @@ module.exports = {
       chainId: 1337,
     },
     mumbai: {
-      url: process.env.POLYGON_MUMBAI_URL,
-      accounts: [],
+      url: MUMBAI_URL,
+      accounts: [METAMASK_ACCOUNT],
     },
     mainnet: {
-      url: process.env.POLYGON_MAINNET_URL,
-      accounts: [],
+      url: MAINNET_URL,
+      accounts: [METAMASK_ACCOUNT],
     },
   },
   solidity: "0.8.4",
