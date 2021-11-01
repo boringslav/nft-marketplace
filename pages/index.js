@@ -34,6 +34,7 @@ export default function Home() {
         image: meta.data.image,
         name: meta.data.name,
         description: meta.data.description,
+        price,
       }
     }))
     setNfts(items)
@@ -61,6 +62,7 @@ export default function Home() {
       return <h1 className="px-20 py-10 text-3xl">No items in marketplace</h1>
     }
   }
+
   return (
     <>
       {renderEmptyShop()}
@@ -76,8 +78,8 @@ export default function Home() {
                 <div style={{ height: '70px', overflow: 'hidden' }}>
                   <p className="text-gray-400">{nft.description}</p>
                 </div>
-                <div className="p-4 bg-black">
-                  <p className="text-2xl font-semibold text-white">{nft.price} Matic</p>
+                <div className="p-4 ">
+                  <p className="text-2xl font-semibold text-black">{nft.price} Matic</p>
                   <button
                     className="w-full bg-pink-500 text-white font-bold py-2 px-12 rounded"
                     onClick={() => buyNft(nft)}>
