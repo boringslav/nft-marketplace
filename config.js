@@ -1,0 +1,2 @@
+export const NFTAddress = '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9'; //add your NFT contract address here
+export const NFTMarketAddress = '0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0';// add your NFT market contract address here
